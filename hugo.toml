@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'PFTsitetest'
+[params]
+ subtitle = 'A place to test my ideas for PFT'
+ 
