@@ -15,18 +15,30 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
+
+  width: min(90%, 1500px);
+  margin-inline: auto;
+  margin-top: 10px;
+
+
+  
   padding: 1rem clamp(1rem, 4vw, 4rem);
   color: #fff;
-  cursor: pointer;
+  /* cursor: pointer; */
+
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
    -webkit-backdrop-filter: blur(10px);
+
   border: solid 1px rgba(255,255,255,0.1);
+  border-radius: 999px;
+
+
   position: sticky;
   top: 10px;
-  width: 100%;
-  box-shadow: 0 4px 30px rgba(0 0 0 0.2);
   z-index: 1000;
+
+  box-shadow: 0 4px 30px rgba(0 0 0 0.2);
 }
 
 .nav strong {
@@ -64,9 +76,22 @@ body {
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("/images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .hero-inner {
@@ -74,6 +99,9 @@ body {
   align-content: center;
   padding: clamp(2rem, 8vw, 8rem);
   max-width: 900px;
+
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .eyebrow {
