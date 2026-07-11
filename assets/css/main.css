@@ -357,14 +357,14 @@ h2 em {
   isolation: isolate;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.38);
-  background: var(--ink);
+  background: var(--paper-deep);
   box-shadow: 0 2rem 5rem rgba(7, 25, 35, 0.2), inset 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .hero-stage {
   min-height: clamp(28rem, 52vw, 42rem);
   border-radius: 2rem;
-  transform: rotate(1.2deg);
+
 }
 
 .stage-grid,
