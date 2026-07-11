@@ -1,6 +1,7 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'PFTsitetest'
+baseURL = '/'
+languageCode = 'en-au'
+title = 'Precision First Technologies'
+
 [params]
- subtitle = 'A place to test my ideas for PFT'
- 
+  description = 'Precision First Technologies builds useful technology across healthcare, biotechnology, enterprise systems and consumer software.'
+  tagline = 'Useful technology, made with intent.'

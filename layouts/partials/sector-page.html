@@ -1,0 +1,88 @@
+{{ $key := .Params.key | default .Section }}
+<main id="main-content" class="sector-page sector-{{ $key }}">
+  <section class="sector-hero section" aria-labelledby="sector-title">
+    <div class="sector-hero-copy">
+      <a class="back-link" href="{{ "/#sectors" | relURL }}"><span aria-hidden="true">←</span> All sectors</a>
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> {{ .Params.eyebrow }}</p>
+      <h1 id="sector-title">{{ .Params.heroTitle | safeHTML }}</h1>
+      <p class="sector-lede">{{ .Params.heroText }}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#focus">Explore this space <span aria-hidden="true">↓</span></a>
+        <a class="text-link" href="{{ "/#contact" | relURL }}">Work with PFT <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <div class="sector-visual" aria-label="{{ .Params.visualLabel }}">
+      <div class="sector-visual-grid" aria-hidden="true"></div>
+      <div class="sector-orbit" aria-hidden="true">
+        <div class="sector-ring sector-ring-one"></div>
+        <div class="sector-ring sector-ring-two"></div>
+        <div class="sector-ring sector-ring-three"></div>
+        <span class="sector-node sector-node-one"></span>
+        <span class="sector-node sector-node-two"></span>
+        <span class="sector-node sector-node-three"></span>
+        <div class="sector-core"><span>{{ .Params.shortCode }}</span><strong>{{ .Params.visualWord }}</strong></div>
+      </div>
+      <span class="visual-label visual-label-one">{{ .Params.visualLabels.one }}</span>
+      <span class="visual-label visual-label-two">{{ .Params.visualLabels.two }}</span>
+      <span class="visual-label visual-label-three">{{ .Params.visualLabels.three }}</span>
+      <span class="visual-footnote">{{ .Params.visualLabel }}</span>
+    </div>
+  </section>
+
+  <section class="section sector-intro" id="focus" aria-labelledby="focus-title">
+    <div class="section-heading section-heading-wide">
+      <div><p class="eyebrow">What belongs here</p><h2 id="focus-title">{{ .Params.introTitle | safeHTML }}</h2></div>
+      <p class="section-intro">{{ .Params.introText }}</p>
+    </div>
+
+    <div class="focus-grid">
+      {{ range $index, $item := .Params.focus }}
+      <article class="focus-card">
+        <div class="focus-card-top"><span>0{{ add $index 1 }}</span><span class="focus-mark" aria-hidden="true">{{ $item.mark }}</span></div>
+        <h3>{{ $item.title }}</h3>
+        <p>{{ $item.text }}</p>
+        <span class="focus-tag">{{ $item.tag }}</span>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section feature-section" aria-labelledby="feature-title">
+    <div class="feature-panel">
+      <div class="feature-copy">
+        <p class="eyebrow">{{ .Params.featureKicker }}</p>
+        <h2 id="feature-title">{{ .Params.featureTitle | safeHTML }}</h2>
+        <p>{{ .Params.featureText }}</p>
+        <span class="work-status">{{ .Params.featureStatus }}</span>
+      </div>
+      <div class="feature-spec">
+        <span class="spec-label">A useful brief</span>
+        <ul>
+          {{ range .Params.featureList }}<li><span aria-hidden="true">+</span>{{ . }}</li>{{ end }}
+        </ul>
+        <span class="spec-code">{{ .Params.featureCode }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section principles-section sector-principles" aria-labelledby="sector-principles-title">
+    <div class="principles-panel">
+      <div class="principles-heading">
+        <p class="eyebrow">How we approach it</p>
+        <h2 id="sector-principles-title">{{ .Params.principlesTitle | safeHTML }}</h2>
+      </div>
+      <div class="principles-list">
+        {{ range $index, $item := .Params.principles }}
+        <article><span>0{{ add $index 1 }}</span><h3>{{ $item.title }}</h3><p>{{ $item.text }}</p></article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="section sector-cta" aria-labelledby="sector-cta-title">
+    <p class="eyebrow">The next step</p>
+    <h2 id="sector-cta-title">{{ .Params.ctaTitle | safeHTML }}</h2>
+    <a class="button button-primary" href="{{ "/#contact" | relURL }}">Start a conversation <span aria-hidden="true">↗</span></a>
+  </section>
+</main>
