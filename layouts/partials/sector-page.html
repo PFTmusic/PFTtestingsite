@@ -13,18 +13,19 @@
     </div>
 
     <div class="sector-visual" role="img" aria-label="{{ .Params.visualLabel }}">
-      <div class="sector-visual-grid" aria-hidden="true"></div>
-      <div class="sector-scan-header"><span>{{ .Params.shortCode }} / sequence map</span><span>5′ — 3′</span></div>
-      <div class="sector-code-panel">
-        <span class="sector-code-label">{{ .Params.visualLabel }}</span>
-        <strong>{{ .Params.visualWord }}</strong>
-        <span class="sector-code-sequence">GCTA <b>{{ .Params.visualKeyword | default "TECHNOLOGY" }}</b> CAGT CGCG TCTA</span>
-      </div>
-      <div class="sector-scan-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-      <span class="visual-label visual-label-one">{{ .Params.visualLabels.one }}</span>
-      <span class="visual-label visual-label-two">{{ .Params.visualLabels.two }}</span>
-      <span class="visual-label visual-label-three">{{ .Params.visualLabels.three }}</span>
-      <span class="visual-footnote">keyword scan / {{ .Params.shortCode }}</span>
+      <svg class="dot-pattern" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="72" cy="76" r="1" fill="var(--ink)" opacity=".08"/><circle cx="120" cy="142" r="2" fill="var(--accent)" opacity=".28"/><circle cx="160" cy="82" r="3" fill="var(--red)" opacity=".25"/>
+        <circle cx="202" cy="250" r="1.5" fill="var(--accent)" opacity=".34"/><circle cx="236" cy="116" r="1" fill="var(--ink)" opacity=".08"/><circle cx="262" cy="330" r="2.5" fill="var(--red)" opacity=".22"/>
+        <circle cx="286" cy="198" r="1.5" fill="var(--accent)" opacity=".42"/><circle cx="314" cy="278" r="3.5" fill="var(--accent)" opacity=".2"/><circle cx="338" cy="84" r="1.5" fill="var(--red)" opacity=".28"/>
+        <circle cx="356" cy="368" r="2" fill="var(--accent)" opacity=".34"/><circle cx="382" cy="160" r="2.5" fill="var(--accent)" opacity=".4"/><circle cx="400" cy="294" r="4" fill="var(--red)" opacity=".17"/>
+        <circle cx="420" cy="236" r="1" fill="var(--ink)" opacity=".1"/><circle cx="438" cy="412" r="1.5" fill="var(--accent)" opacity=".35"/><circle cx="460" cy="120" r="3" fill="var(--red)" opacity=".24"/>
+        <circle cx="474" cy="328" r="2" fill="var(--accent)" opacity=".45"/><circle cx="496" cy="214" r="1.5" fill="var(--accent)" opacity=".3"/><circle cx="518" cy="390" r="3.5" fill="var(--accent)" opacity=".18"/>
+        <circle cx="538" cy="270" r="2.5" fill="var(--red)" opacity=".26"/><circle cx="556" cy="164" r="1" fill="var(--ink)" opacity=".08"/><circle cx="580" cy="450" r="1.5" fill="var(--accent)" opacity=".3"/>
+        <circle cx="602" cy="310" r="3" fill="var(--accent)" opacity=".34"/><circle cx="628" cy="102" r="2" fill="var(--red)" opacity=".3"/><circle cx="646" cy="244" r="1.5" fill="var(--accent)" opacity=".24"/>
+        <circle cx="672" cy="372" r="2.5" fill="var(--red)" opacity=".21"/><circle cx="704" cy="194" r="1" fill="var(--ink)" opacity=".08"/><circle cx="726" cy="466" r="3" fill="var(--accent)" opacity=".25"/>
+        <circle cx="104" cy="420" r="2.5" fill="var(--accent)" opacity=".2"/><circle cx="178" cy="502" r="1" fill="var(--red)" opacity=".26"/><circle cx="250" cy="462" r="3" fill="var(--accent)" opacity=".18"/>
+        <circle cx="326" cy="522" r="1.5" fill="var(--ink)" opacity=".08"/><circle cx="492" cy="510" r="2" fill="var(--red)" opacity=".23"/><circle cx="654" cy="536" r="1.5" fill="var(--accent)" opacity=".28"/>
+      </svg>
     </div>  </section>
 
   <section class="section sector-intro" id="focus" aria-labelledby="focus-title">

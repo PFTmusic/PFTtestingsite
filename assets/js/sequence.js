@@ -2,7 +2,7 @@
 const track = document.querySelector('[data-sequence-track]');
 if (track) {
   let seed = 0x504654;
-  const bases = 'ACGT', keywords = ['PRECISION', 'BIOTECHNOLOGY', 'HEALTHCARE', 'FUTURE', 'TECHNOLOGY'];
+  const bases = 'ACGT', keywords = ['PRECISION', 'HEALTHCARE', 'BIOLOGY', 'SIGNAL', 'USEFUL', 'SYSTEMS', 'DESIGN', 'CLEAR', 'PFT'];
   const random = () => (seed = (seed * 1664525 + 1013904223) >>> 0) / 2 ** 32;
   const fill = length => Array.from({ length }, () => bases[Math.floor(random() * 4)]).join('');
   const sequence = (keyword, columns) => { const filler = fill(columns - keyword.length), offset = 2 + Math.floor(random() * Math.max(1, filler.length - 3)); return `${filler.slice(0, offset)}<b class="motif">${keyword}</b>${filler.slice(offset)}`; };
