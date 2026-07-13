@@ -4,7 +4,7 @@
     <div class="sector-hero-copy">
       <a class="back-link" href="{{ "/#sectors" | relURL }}"><span aria-hidden="true">←</span> All sectors</a>
       <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> {{ .Params.eyebrow }}</p>
-      <h1 id="sector-title">{{ .Params.heroTitle | safeHTML }}</h1>
+      <h1 id="sector-title">{{ .Params.heroTitle | markdownify }}</h1>
       <p class="sector-lede">{{ .Params.heroText }}</p>
       <div class="hero-actions">
         <a class="button button-primary" href="#focus">Explore this space <span aria-hidden="true">↓</span></a>
@@ -14,11 +14,11 @@
 
     <div class="sector-visual" role="img" aria-label="{{ .Params.visualLabel }}">
       <div class="sector-visual-grid" aria-hidden="true"></div>
-      <div class="sector-scan-header"><span>{{ .Params.shortCode }} / sequence map</span><span>5â€² â€” 3â€²</span></div>
+      <div class="sector-scan-header"><span>{{ .Params.shortCode }} / sequence map</span><span>5′ — 3′</span></div>
       <div class="sector-code-panel">
         <span class="sector-code-label">{{ .Params.visualLabel }}</span>
         <strong>{{ .Params.visualWord }}</strong>
-        <span class="sector-code-sequence">GCTA <b>TECHNOLOGY</b> CAGT CGCG TCTA</span>
+        <span class="sector-code-sequence">GCTA <b>{{ .Params.visualKeyword | default "TECHNOLOGY" }}</b> CAGT CGCG TCTA</span>
       </div>
       <div class="sector-scan-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <span class="visual-label visual-label-one">{{ .Params.visualLabels.one }}</span>
@@ -29,18 +29,18 @@
 
   <section class="section sector-intro" id="focus" aria-labelledby="focus-title">
     <div class="section-heading section-heading-wide">
-      <div><p class="eyebrow">What belongs here</p><h2 id="focus-title">{{ .Params.introTitle | safeHTML }}</h2></div>
+      <div><p class="eyebrow">{{ .Params.introEyebrow | default "Focus areas" }}</p><h2 id="focus-title">{{ .Params.introTitle | markdownify }}</h2></div>
       <p class="section-intro">{{ .Params.introText }}</p>
     </div>
 
     <div class="focus-grid">
       {{ range $index, $item := .Params.focus }}
-      <article class="focus-card">
-        <div class="focus-card-top"><span>0{{ add $index 1 }}</span><span class="focus-mark" aria-hidden="true">{{ $item.mark }}</span></div>
+      <div class="focus-card">
+        <div class="focus-card-top"><span>{{ printf "%02d" (add $index 1) }}</span><span class="focus-mark" aria-hidden="true">{{ $item.mark }}</span></div>
         <h3>{{ $item.title }}</h3>
         <p>{{ $item.text }}</p>
         <span class="focus-tag">{{ $item.tag }}</span>
-      </article>
+      </div>
       {{ end }}
     </div>
   </section>
@@ -49,7 +49,7 @@
     <div class="feature-panel">
       <div class="feature-copy">
         <p class="eyebrow">{{ .Params.featureKicker }}</p>
-        <h2 id="feature-title">{{ .Params.featureTitle | safeHTML }}</h2>
+        <h2 id="feature-title">{{ .Params.featureTitle | markdownify }}</h2>
         <p>{{ .Params.featureText }}</p>
         <span class="work-status">{{ .Params.featureStatus }}</span>
       </div>
@@ -67,11 +67,11 @@
     <div class="principles-panel">
       <div class="principles-heading">
         <p class="eyebrow">How we approach it</p>
-        <h2 id="sector-principles-title">{{ .Params.principlesTitle | safeHTML }}</h2>
+        <h2 id="sector-principles-title">{{ .Params.principlesTitle | markdownify }}</h2>
       </div>
       <div class="principles-list">
         {{ range $index, $item := .Params.principles }}
-        <article><span>0{{ add $index 1 }}</span><h3>{{ $item.title }}</h3><p>{{ $item.text }}</p></article>
+        <div><span>{{ printf "%02d" (add $index 1) }}</span><h3>{{ $item.title }}</h3><p>{{ $item.text }}</p></div>
         {{ end }}
       </div>
     </div>
@@ -79,7 +79,7 @@
 
   <section class="section sector-cta" aria-labelledby="sector-cta-title">
     <p class="eyebrow">The next step</p>
-    <h2 id="sector-cta-title">{{ .Params.ctaTitle | safeHTML }}</h2>
+    <h2 id="sector-cta-title">{{ .Params.ctaTitle | markdownify }}</h2>
     <a class="button button-primary" href="{{ "/#contact" | relURL }}">Start a conversation <span aria-hidden="true">↗</span></a>
   </section>
 </main>

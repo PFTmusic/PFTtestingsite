@@ -1,19 +1,19 @@
-<footer class="site-footer">
+<footer class="site-footer" aria-label="Site footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="brand-mark" aria-hidden="true">PFT</span>
-      <p>Precision First Technologies</p>
-      <small>Melbourne · Australia</small>
+      <span class="brand-mark" aria-hidden="true">{{ site.Params.shortName }}</span>
+      <p>{{ site.Title }}</p>
+      <small>{{ site.Params.location }}</small>
     </div>
 
     <div class="footer-note">
       <p>For useful problems, ambitious ideas and technology that deserves to exist.</p>
-      <a href="mailto:hello@precisionfirst.tech">hello@precisionfirst.tech <span aria-hidden="true">↗</span></a>
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }} <span aria-hidden="true">↗</span></a>
     </div>
 
     <div class="footer-meta">
       <span>Independent technology studio</span>
-      <span>© {{ now.Year }} PFT</span>
+      <span>© {{ now.Year }} {{ site.Params.shortName }}</span>
     </div>
   </div>
 </footer>

@@ -4,13 +4,17 @@
     <span class="brand-name">Precision First<br><span>Technologies</span></span>
   </a>
 
-  <nav class="site-nav" aria-label="Primary navigation">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+    <span aria-hidden="true"></span>
+  </button>
+
+  <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
     <a href="{{ "/#sectors" | relURL }}">Sectors</a>
     <a href="{{ "/#principles" | relURL }}">Principles</a>
     <a href="{{ "/#contact" | relURL }}">Contact</a>
   </nav>
 
-  <a class="nav-cta" href="{{ "/#contact" | relURL }}">
+  <a class="nav-cta" href="{{ "/#contact" | relURL }}" aria-label="Start a conversation">
     <span>Start a conversation</span><span aria-hidden="true">↗</span>
   </a>
 </header>

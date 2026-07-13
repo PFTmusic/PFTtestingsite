@@ -1,7 +1,13 @@
-baseURL = '/'
-languageCode = 'en-au'
+baseURL = 'https://precisionfirst.tech/'
+languageCode = 'en-AU'
 title = 'Precision First Technologies'
 
 [params]
   description = 'Precision First Technologies builds useful technology across healthcare, biotechnology, enterprise systems and consumer software.'
   tagline = 'Useful technology, made with intent.'
+  author = 'Precision First Technologies'
+  email = 'hello@precisionfirst.tech'
+  location = 'Melbourne · Australia'
+  shortName = 'PFT'
+  themeColor = '#071923'
+  ogImage = '/images/og-default.png'

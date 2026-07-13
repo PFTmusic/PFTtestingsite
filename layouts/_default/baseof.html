@@ -3,17 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071923">
+  <meta name="theme-color" content="{{ site.Params.themeColor }}">
   <meta name="description" content="{{ .Params.description | default site.Params.description }}">
+  <meta name="robots" content="index, follow">
   <title>{{ if .Title }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ .Title | default site.Title }}">
+  <meta property="og:description" content="{{ .Params.description | default site.Params.description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
+  <meta property="og:site_name" content="{{ site.Title }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title | default site.Title }}">
+  <meta name="twitter:description" content="{{ .Params.description | default site.Params.description }}">
+  <meta name="twitter:image" content="{{ site.Params.ogImage | absURL }}">
 
   {{ with resources.Get "css/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{ end }}
+
+  {{ block "head" . }}{{ end }}
 </head>
 
 <body class="page-{{ .Kind }}{{ with .Params.key }} page-{{ . }}{{ end }}">
   <a class="skip-link" href="#main-content">Skip to content</a>
   {{ block "main" . }}{{ end }}
+
+  <script>
+    document.querySelectorAll('.nav-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        var nav = document.getElementById(this.getAttribute('aria-controls'));
+        if (nav) nav.classList.toggle('is-open');
+      });
+    });
+  </script>
 </body>
 </html>
