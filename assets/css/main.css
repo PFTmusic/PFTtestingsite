@@ -104,7 +104,7 @@ h1 em, h2 em { color: var(--accent); font-style: normal; }
 .sequence-row { display: flex; min-height: clamp(2.65rem, 5.6vh, 3.4rem); align-items: center; border-bottom: 1px solid var(--line); }
 .sequence-row__index { display: none; }
 .sequence-string { display: block; width: 100%; overflow: hidden; color: rgba(0, 0, 0, .4); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: clamp(1.05rem, 2.1vw, 1.55rem); letter-spacing: .07em; line-height: 1; white-space: nowrap; }
-.sequence-string .motif { color: rgba(199, 62, 29, .8); font-weight: 700; }
+.sequence-string .motif { color: rgba(199, 62, 29, 1); font-weight: 700; font-size: 1.4rem; }
 @keyframes pft-sequence-scroll { to { transform: translateY(-80%); } }
 
 .section { padding-block: clamp(5rem, 10vw, 10rem); }
