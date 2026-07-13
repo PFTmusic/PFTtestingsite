@@ -3,18 +3,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:50237/biotechnology/</loc>
+    <loc>//localhost:1313/biotechnology/</loc>
   </url><url>
-    <loc>//localhost:50237/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>//localhost:50237/consumer/</loc>
+    <loc>//localhost:1313/consumer/</loc>
   </url><url>
-    <loc>//localhost:50237/enterprise/</loc>
+    <loc>//localhost:1313/enterprise/</loc>
   </url><url>
-    <loc>//localhost:50237/healthcare/</loc>
+    <loc>//localhost:1313/healthcare/</loc>
   </url><url>
-    <loc>//localhost:50237/</loc>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>//localhost:50237/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

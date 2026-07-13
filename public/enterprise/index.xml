@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Enterprise on Precision First Technologies</title>
-		<link>//localhost:50237/enterprise/</link>
+		<link>//localhost:1313/enterprise/</link>
 		<description>Recent content in Enterprise on Precision First Technologies</description>
 		<generator>Hugo</generator>
 		<language>en-au</language>
@@ -10,6 +10,6 @@
 		
 		
 		
-			<atom:link href="//localhost:50237/enterprise/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="//localhost:1313/enterprise/index.xml" rel="self" type="application/rss+xml" />
 	</channel>
 </rss>
