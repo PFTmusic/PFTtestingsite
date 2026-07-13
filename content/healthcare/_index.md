@@ -44,5 +44,5 @@ principles:
     text: Explain the signal, the uncertainty and the responsibility around it.
   - title: Care is connected
     text: Products succeed when the surrounding service is considered too.
-ctaTitle: Have a healthcare problem<br><em>worth making clearer?</em>
+ctaTitle: Have a healthcare problem <br><em>worth making clearer?</em>
 ---

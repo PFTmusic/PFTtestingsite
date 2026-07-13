@@ -44,5 +44,5 @@ principles:
     text: Governance should create confidence, not a second job nobody can maintain.
   - title: Design for handover
     text: The best operating system is one the team can own after the builder leaves.
-ctaTitle: Is the way you work<br><em>harder than it needs to be?</em>
+ctaTitle: Is the way you work <br><em>harder than it needs to be?</em>
 ---

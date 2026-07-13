@@ -44,5 +44,5 @@ principles:
     text: The last mile between discovery and use deserves as much thought as the first.
   - title: Outcomes compound
     text: Better measurement today can unlock better questions tomorrow.
-ctaTitle: Working on a biological problem<br><em>that needs a bridge?</em>
+ctaTitle: Working on a biological problem <br><em>that needs a bridge?</em>
 ---

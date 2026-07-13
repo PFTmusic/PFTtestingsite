@@ -44,5 +44,5 @@ principles:
     text: A strong point of view is often more useful than another feature.
   - title: Leave a little room
     text: Good products do their job, then give people space to do theirs.
-ctaTitle: Have a small idea<br><em>with a big point of view?</em>
+ctaTitle: Have a small idea <br><em>with a big point of view?</em>
 ---
