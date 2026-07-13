@@ -20,34 +20,16 @@
       </div>
     </div>
 
-    <div class="hero-stage" aria-label="A visual representation of connected PFT projects">
-      <div class="stage-grid" aria-hidden="true"></div>
-      <div class="orbit-system" aria-hidden="true">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="orbit orbit-three"></div>
-        <span class="orbit-node node-one"></span>
-        <span class="orbit-node node-two"></span>
-        <span class="orbit-node node-three"></span>
-        <div class="orbit-core">
-          <span class="core-label">PFT / 01</span>
-          <strong>Make it<br>useful.</strong>
-          <span class="core-line"></span>
+    <div class="sequence-display" role="img" aria-label="Scrolling DNA-like sequences with highlighted PFT keywords">
+      <div class="sequence-window" aria-hidden="true">
+        <div class="sequence-track" data-sequence-track>
+          <div class="sequence-row"><span class="sequence-string">ACGTACGTACGTACGTACGTACGTACGTACGT</span></div>
+          <div class="sequence-row"><span class="sequence-string">TGCATGCATGCATGCATGCATGCATGCATGCA</span></div>
+          <div class="sequence-row"><span class="sequence-string">CGATCGATCGATCGATCGATCGATCGATCGAT</span></div>
+          <div class="sequence-row"><span class="sequence-string">GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA</span></div>
         </div>
       </div>
-
-      <div class="stage-card stage-card-top">
-        <span class="card-kicker">Signal / 01</span>
-        <strong>Ideas → systems</strong>
-        <span>Research · design · delivery</span>
-      </div>
-      <div class="stage-card stage-card-bottom">
-        <span class="stage-card-index">04</span>
-        <span>domains<br>connected</span>
-      </div>
-      <span class="stage-caption">A portfolio in motion</span>
-    </div>
-  </section>
+    </div>  </section>
 
   <section class="section section-sectors" id="sectors" aria-labelledby="sectors-title">
     <div class="section-heading section-heading-wide">
@@ -150,4 +132,6 @@
 </main>
 
 {{ partial "site-footer.html" . }}
+
+{{ with resources.Get "js/sequence.js" | minify | fingerprint }}<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>{{ end }}
 {{ end }}

@@ -12,23 +12,20 @@
       </div>
     </div>
 
-    <div class="sector-visual" aria-label="{{ .Params.visualLabel }}">
+    <div class="sector-visual" role="img" aria-label="{{ .Params.visualLabel }}">
       <div class="sector-visual-grid" aria-hidden="true"></div>
-      <div class="sector-orbit" aria-hidden="true">
-        <div class="sector-ring sector-ring-one"></div>
-        <div class="sector-ring sector-ring-two"></div>
-        <div class="sector-ring sector-ring-three"></div>
-        <span class="sector-node sector-node-one"></span>
-        <span class="sector-node sector-node-two"></span>
-        <span class="sector-node sector-node-three"></span>
-        <div class="sector-core"><span>{{ .Params.shortCode }}</span><strong>{{ .Params.visualWord }}</strong></div>
+      <div class="sector-scan-header"><span>{{ .Params.shortCode }} / sequence map</span><span>5â€² â€” 3â€²</span></div>
+      <div class="sector-code-panel">
+        <span class="sector-code-label">{{ .Params.visualLabel }}</span>
+        <strong>{{ .Params.visualWord }}</strong>
+        <span class="sector-code-sequence">GCTA <b>TECHNOLOGY</b> CAGT CGCG TCTA</span>
       </div>
+      <div class="sector-scan-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       <span class="visual-label visual-label-one">{{ .Params.visualLabels.one }}</span>
       <span class="visual-label visual-label-two">{{ .Params.visualLabels.two }}</span>
       <span class="visual-label visual-label-three">{{ .Params.visualLabels.three }}</span>
-      <span class="visual-footnote">{{ .Params.visualLabel }}</span>
-    </div>
-  </section>
+      <span class="visual-footnote">keyword scan / {{ .Params.shortCode }}</span>
+    </div>  </section>
 
   <section class="section sector-intro" id="focus" aria-labelledby="focus-title">
     <div class="section-heading section-heading-wide">
