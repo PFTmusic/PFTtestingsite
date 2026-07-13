@@ -96,16 +96,16 @@ h1 em, h2 em { color: var(--accent); font-style: normal; }
 
 /* Ambient sequence texture */
 .sequence-display { position: relative; height: clamp(28rem, 68vh, 40rem); overflow: hidden; }
-.sequence-display::before, .sequence-display::after { position: absolute; right: 0; left: 0; z-index: 1; height: 6rem; content: ""; pointer-events: none; }
+.sequence-display::before, .sequence-display::after { position: absolute; right: 0; left: 0; z-index: 1; height: 8rem; content: ""; pointer-events: none; }
 .sequence-display::before { top: 0; background: linear-gradient(to bottom, var(--paper), transparent); }
 .sequence-display::after { bottom: 0; background: linear-gradient(to top, var(--paper), transparent); }
 .sequence-window { height: 100%; overflow: hidden; }
 .sequence-track { animation: pft-sequence-scroll var(--scan-duration, 28s) linear infinite; will-change: transform; }
 .sequence-row { display: flex; min-height: clamp(2.65rem, 5.6vh, 3.4rem); align-items: center; border-bottom: 1px solid var(--line); }
 .sequence-row__index { display: none; }
-.sequence-string { display: block; width: 100%; overflow: hidden; color: rgba(0, 0, 0, .07); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: clamp(1.05rem, 2.1vw, 1.55rem); letter-spacing: .07em; line-height: 1; white-space: nowrap; }
-.sequence-string .motif { color: rgba(199, 62, 29, .3); font-weight: 700; }
-@keyframes pft-sequence-scroll { to { transform: translateY(-50%); } }
+.sequence-string { display: block; width: 100%; overflow: hidden; color: rgba(0, 0, 0, .4); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: clamp(1.05rem, 2.1vw, 1.55rem); letter-spacing: .07em; line-height: 1; white-space: nowrap; }
+.sequence-string .motif { color: rgba(199, 62, 29, .8); font-weight: 700; }
+@keyframes pft-sequence-scroll { to { transform: translateY(-80%); } }
 
 .section { padding-block: clamp(5rem, 10vw, 10rem); }
 .section-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(14rem, .65fr); gap: 3rem; align-items: end; margin-bottom: 3rem; }
